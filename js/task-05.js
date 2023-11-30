@@ -4,7 +4,9 @@
     outputEl: document.getElementById('name-output'),
   };
 
-  refs.inputEl.addEventListener('input', ({ target: { value } }) => {
+  const handleInput = ({ target: { value } }) => {
     refs.outputEl.textContent = value || 'Anonymous';
-  });
+  }
+
+  refs.inputEl.addEventListener('input', handleInput);
 })();

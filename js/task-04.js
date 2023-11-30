@@ -5,12 +5,15 @@
     increaseButtonEl = counterEl.querySelector('[data-action="increment"]');
   let counterValue = 0;
 
-  desreaseButtonEl.addEventListener('click', () => {
+  const decreaseValue = () => {
     counterValue -= 1;
     counterValueEl.textContent = counterValue;
-  });
-  increaseButtonEl.addEventListener('click', () => {
+  }
+  const increaseValue = () => {
     counterValue += 1;
     counterValueEl.textContent = counterValue;
-  });
+  }
+
+  desreaseButtonEl.addEventListener('click', decreaseValue);
+  increaseButtonEl.addEventListener('click', increaseValue);
 })();
