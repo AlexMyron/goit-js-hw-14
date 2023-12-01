@@ -9,6 +9,5 @@ const ingredients = ['Potatoes', 'Mushrooms', 'Garlic', 'Tomatos', 'Herbs', 'Con
     ingredient.classList.add('item');
     fragment.push(ingredient);
   });
-  console.log(fragment);
   rootElement.append(...fragment);
 })();
