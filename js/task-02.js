@@ -2,12 +2,13 @@ const ingredients = ['Potatoes', 'Mushrooms', 'Garlic', 'Tomatos', 'Herbs', 'Con
 
 (() => {
   const rootElement = document.getElementById('ingredients');
-  const fragment = document.createDocumentFragment();
+  const fragment = [];
   ingredients.forEach(ingredientName => {
     const ingredient = document.createElement('li');
     ingredient.textContent = ingredientName;
     ingredient.classList.add('item');
-    fragment.appendChild(ingredient);
+    fragment.push(ingredient);
   });
-  rootElement.appendChild(fragment);
+  console.log(fragment);
+  rootElement.append(...fragment);
 })();
